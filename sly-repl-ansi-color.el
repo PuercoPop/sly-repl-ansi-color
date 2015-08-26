@@ -1,11 +1,11 @@
 ;; Ported from is Max Mikhanosha's code.
 (require 'ansi-color)
+(require 'sly-mrepl)
 
 (define-sly-contrib sly-repl-ansi-color
   "Turn on ANSI colors in the mREPL output"
   (:authors '("Javier Olaechea" "Max Mikhanosha"))
   (:license "GPL")
-  (:sly-dependencies sly-mrepl)
   (:on-load (progn
               (sly-repl-ansi-on)
               (add-hook 'sly-mrepl-output-filter-functions
