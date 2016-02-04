@@ -1,4 +1,17 @@
-;; Ported from is Max Mikhanosha's code.
+;;; sly-repl-ansi-color.el --- Add ANSI colors support to the sly mrepl.
+
+;; Author: Javier "PuercoPop" Olaechea <pirata@gmail.com>
+;;         Max Mikhanosha
+;; Package-Requires: ((sly "0"))
+;; Keywords: sly
+;; URL: https://github.com/PuercoPop/sly-repl-ansi-color
+;; Version: 0.1
+
+;;; Commentary:
+;; This package adds ANSI colors support to the sly mrepl. It is a port of
+;; slime-repl-ansi-color.el which was originally written by Max Mikhanosha.
+
+;;; Code:
 (require 'ansi-color)
 (require 'sly-mrepl)
 
@@ -38,3 +51,4 @@
       (buffer-string))))
 
 (provide 'sly-repl-ansi-color)
+;;; sly-repl-ansi-color.el ends here
