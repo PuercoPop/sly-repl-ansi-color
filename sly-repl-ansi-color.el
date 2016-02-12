@@ -13,7 +13,7 @@
 
 ;;; Code:
 (require 'ansi-color)
-(require 'sly-mrepl)
+(require 'sly)
 
 (define-sly-contrib sly-repl-ansi-color
   "Turn on ANSI colors in the mREPL output"
