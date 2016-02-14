@@ -14,6 +14,7 @@
 ;;; Code:
 (require 'ansi-color)
 (require 'sly)
+(require 'cl-lib)
 
 (define-sly-contrib sly-repl-ansi-color
   "Turn on ANSI colors in the mREPL output"
@@ -45,7 +46,7 @@
       (insert (ansi-color-apply string))
       (dotimes (char-pos (- (point-max) (point-min)))
         (let* ((char-pos (1+ char-pos))
-               (prop (getf (text-properties-at char-pos) 'font-lock-face)))
+               (prop (cl-getf (text-properties-at char-pos) 'font-lock-face)))
           (when prop
             (put-text-property char-pos (1+ char-pos) 'face prop))))
       (buffer-string))))
